@@ -1,0 +1,21 @@
+Hay varias posibles condiciones de carrera como:
+
+1.Dos o más jugadores eligan un racerID igual al mismo tiempo, esto se puede combatir en este modelo utilizando un concurrentHashmap como el usado en el ejercicio
+evita algunos casos pero no el 100% de ellos. 
+Region critica (Input de seleccion de id) 
+Inconsistencias (El moveX funciona con el id Moveria dos carros al tiempo , el ganador serian dos personas)
+Arreglos(No poner al usuario a escoger el id xd y el mencionado anteriormente)
+
+2.Dos o más jugadores llegan al mismo tiempo a la meta 
+Region critica ( button moveX)
+Inconsistencias ( Dos personas ganan al tiempo generando bugs en la forma en la que se da el ganador)
+Arreglos(Otro estilo de manejar las posiciones y no hacerlo con un button que sume de a 10)
+
+3. Dos o más jugadores intentan ser el 5 jugador para empezar a jugar, esto se soluciona facil añadiendo más salas, que no sea estatica la sala 25 si no que direccione a
+los jugadores a distintas salas.
+
+Region Critica (Button register(
+
+Inconsistecias (Salas de 6 o mas jugadores que nunca dejaran empezar el juego)
+
+Arreglos(Creacion de salas y que los jugadores sean redireccionados a este en vez de todo en la misma sala)
